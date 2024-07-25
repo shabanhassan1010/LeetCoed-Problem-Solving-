@@ -10,8 +10,8 @@ public class Solution
         SortedSet<int> set2 = new SortedSet<int>(nums2);
 
         // Find differences and Retuen the value in list Not array or any Collection Type
-        IList<int> onlyInNums1 = set1.Except(set2).ToList();
-        IList<int> onlyInNums2 = set2.Except(set1).ToList();
+        var onlyInNums1 = set1.Except(set2).ToList();
+        var onlyInNums2 = set2.Except(set1).ToList();
 
         // Return results as a list of lists
         return new List<IList<int>> { onlyInNums1, onlyInNums2 };
