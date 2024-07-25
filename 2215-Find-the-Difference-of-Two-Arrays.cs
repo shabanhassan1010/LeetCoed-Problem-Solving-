@@ -1,14 +1,15 @@
 public class Solution 
 {
+    // Use SortedSet Topic 
     public IList<IList<int>> FindDifference(int[] nums1, int[] nums2)
     {
         // Input : nums1 = [1,2,3],   nums2 = [2,4,6]
         // Output: [[1,3],[4,6]]
-         // Convert arrays to HashSets to easily find differences
-        HashSet<int> set1 = new HashSet<int>(nums1);
-        HashSet<int> set2 = new HashSet<int>(nums2);
+        // Convert arrays to HashSets to easily find differences
+        SortedSet<int> set1 = new SortedSet<int>(nums1);
+        SortedSet<int> set2 = new SortedSet<int>(nums2);
 
-        // Find differences and Retuen the value in list Not array or any type
+        // Find differences and Retuen the value in list Not array or any Collection Type
         IList<int> onlyInNums1 = set1.Except(set2).ToList();
         IList<int> onlyInNums2 = set2.Except(set1).ToList();
 
